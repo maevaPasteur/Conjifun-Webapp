@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>ConjiFUN, la conjugaison en plus fun.</title>
+    <meta name="description" content="Reviser les tables de conjugaison en ligne, avec Conjifun conjuger devient un jeu d'enfant." />
+    <meta name="keywords" content="conjifun, conjuguer, table, conjugaison, reviser, en ligne" />
+    <meta name="author" content="Maeva Pasteur" />
+    <meta name="copyright" content="© 2017 Maeva Pasteur" />
+    <meta name="robots" content="all" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="visible">
+<header>
+    <h1>ConjiFUN</h1>
+    <h2>Bonjour, comment t'appelles-tu ?</h2>
+    <p><input type="text" ng-model="name"></p>
+    <a id="validName" href="#profil"><img class="valider" src="http://maevapasteur.fr/conjifun/images/ok.png" alt="valider" onclick="recommencer();"></a>
+    <div class="cloud">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+<main>
+    <div id="profil">
+        <h2>Bienvenue </h2><h2 ng-bind="name"></h2>
+        <h3>Sur quel temps veux-tu t'excercer ?</h3>
+        <div id="choixTemps">
+            <a href="#exercice" onclick="debuter(imparfait);" ><button type="button" id="imparfait">Imparfait</button></a>
+            <a href="#exercice" onclick="debuter(present);"><button type="button" id="present">Présent</button></a>
+            <a href="#exercice" onclick="debuter(future);"><button type="button" id="future">Future</button></a>
+        </div>
+    </div>
+    <div id="exercice" class="">
+        <div>
+            <h4><input type="text"></h4>
+            <p><input type="text"><input type="text" class=""></p>
+            <img src="http://maevapasteur.fr/conjifun/images/ok.png" class="" onclick="verifier(0);">
+            <h5><input type="text" class=""></h5>
+        </div>
+        <div class="hide">
+            <h4><input type="text"></h4>
+            <p><input type="text"><input type="text" class=""></p>
+            <img src="http://maevapasteur.fr/conjifun/images/ok.png" class="" onclick="verifier(1);">
+            <h5><input type="text" class=""></h5>
+        </div>
+        <div class="hide">
+            <h4><input type="text"></h4>
+            <p><input type="text"><input type="text" class=""></p>
+            <img src="http://maevapasteur.fr/conjifun/images/ok.png" class="" onclick="verifier(2);">
+            <h5><input type="text" class=""></h5>
+        </div>
+        <div class="hide">
+            <h4><input type="text"></h4>
+            <p><input type="text"><input type="text" class=""></p>
+            <img src="http://maevapasteur.fr/conjifun/images/ok.png" class="" onclick="verifier(3);">
+            <h5><input type="text" class=""></h5>
+        </div>
+        <div class="hide">
+            <h4><input type="text"></h4>
+            <p><input type="text"><input type="text" class=""></p>
+            <img src="http://maevapasteur.fr/conjifun/images/ok.png" class="" onclick="verifier(4);">
+            <h5><input type="text" class=""></h5>
+        </div>
+        <div class="hide">
+            <h4><input type="text"></h4>
+            <p><input type="text"><input type="text" class=""></p>
+            <img src="http://maevapasteur.fr/conjifun/images/ok.png" class="" onclick="verifier(5);">
+            <h5><input type="text" class=""></h5>
+        </div>
+        <div class="hide">
+            <h4><input type="text"></h4>
+            <p><input type="text"><input type="text" class=""></p>
+            <img src="http://maevapasteur.fr/conjifun/images/ok.png" class="" onclick="verifier(6);">
+            <h5><input type="text" class=""></h5>
+        </div>
+        <div class="hide">
+            <h4><input type="text"></h4>
+            <p><input type="text"><input type="text" class=""></p>
+            <img src="http://maevapasteur.fr/conjifun/images/ok.png" class="" onclick="verifier(7);">
+            <h5><input type="text" class=""></h5>
+        </div>
+        <div class="hide">
+            <h4><input type="text"></h4>
+            <p><input type="text"><input type="text" class=""></p>
+            <img src="http://maevapasteur.fr/conjifun/images/ok.png" class="" onclick="verifier(8);">
+            <h5><input type="text" class=""></h5>
+        </div>
+        <div class="hide">
+            <h4><input type="text"></h4>
+            <p><input type="text"><input type="text" class=""></p>
+            <img src="http://maevapasteur.fr/conjifun/images/ok.png" class="" onclick="verifier(9);">
+            <h5><input type="text" class=""></h5>
+        </div>
+    </div>
+    <div id="score">
+        <h2>Ton score est de :</h2>
+        <h3><input type="text"></h3>
+    </div>
+</main>
+<footer>
+    <div>
+        <a href="https://www.facebook.com/maeva.pasteur.photographie"><img src="http://maevapasteur.fr/conjifun/images/facebook.png" alt="facebook"></a><a href="https://www.linkedin.com/in/maeva-pasteur-pro/"><img src="images/profil.png" alt="linkedin"></a><a href="maevapasteur.fr"><img src="images/website.png" alt="portfolio"></a><a href="mailto:maeva.pasteur.pro@gmail.com"><img src="images/mail.png" alt="mail"></a>
+    </div>
+    <p>© 2017 <a href="http://www.maevapasteur.fr">Maëva Pasteur</a></p>
+</footer>
+
+</body>
+<script>
+
+    //////////////////////////////////////////////////////////
+    // Valider le nom et faire apparaitre le reste de la page
+    var $root = $('html, body');
+
+    $('a[href^="#"]').click(function () {
+        $root.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 1000);
+
+        return false;
+    });
+
+
+    ////////////////////////////////////
+    // Contenu des tables de conjugaison
+    var pronom =["je", "tu", "elle", "nous", "vous", "ils"];
+
+    var verbeG1 =["nag", "chant", "rigol", "rentr", "march", "saut", "gliss", "cach", "cach", "rêv", "gard", "ferm", "cess", "répét", "donn"];
+    var verbeG2 =["chois", "grand", "nourr", "réfléch", "gross", "sais", "viell", "réun", "défin", "sub", "fourn", "pun", "un"];
+
+    var terminaisonPresentG1 =["e", "es", "e", "ons", "ez", "ent"];
+    var terminaisonPresentG2 =["is", "is", "it", "issons", "issez", "issent"];
+
+    var terminaisonImparfaitG1 =["ais", "ais", "ait", "ions", "iez", "aient"];
+    var terminaisonImparfaitG2 =["issais", "issais", "issait", "issions", "issiez", "issaient"];
+
+    var terminaisonFutureG1 =["erai", "eras", "era", "erons", "erez", "eront"];
+    var terminaisonFutureG2 =["irai", "iras", "ira", "irons", "irez", "iront"];
+
+    var consigne;
+
+
+
+    ////////////////////////////////////
+    // les variables
+    var valider = document.querySelectorAll("#exercice > div > img");
+    var divExercice = document.querySelector("#exercice");
+    var listInput = document.querySelectorAll("#exercice div p input:last-of-type");
+    var listConsigne = document.querySelectorAll("#exercice div h4 input");
+    var listDebut = document.querySelectorAll("#exercice div p input:first-of-type");
+    var listExe = document.querySelectorAll("#exercice > div");
+    var listCorrection = document.querySelectorAll("h5 input");
+    var placePronom;
+    var verbeActif;
+    var groupe;
+    var verbeEntier;
+    var terminaison;
+    var correction;
+    var reponse;
+    var alea;
+    var nombreParties = 0;
+    var reussite =0;
+    var score;
+    var compteur = document.querySelector("#score input");
+
+    compteur.value = "0";
+    compteur.disabled="true";
+
+    //fonction pour déterminer un nombre aléatoirement entre 1 et N
+    function aleatoire(N) {
+        alea = (Math.floor((N)*Math.random()+1));
+        alea = alea - 1;
+        return alea;
+    }
+
+    function obtenirTerminaison(temps, placePronom, groupe) {
+        if (groupe == 1){
+
+            aleatoire(verbeG1.length); // appel fonction aléatoire entre 0 et la longueur de la liste de verbe, renvoi valeur dans alea
+            verbeActif = verbeG1[alea]; // seulement le radical du verbe
+            verbeEntier = verbeActif + "er"; //verbe entier
+
+            switch (temps){
+                case "imparfait":
+                {
+                    terminaison = terminaisonImparfaitG1[placePronom];
+                }
+                    break;
+
+                case "present":
+                {
+                    terminaison = terminaisonPresentG1[placePronom];
+                }
+                    break;
+
+                case "future":
+                {
+                    terminaison = terminaisonFutureG1[placePronom];
+                }
+                    break;
+            }
+        }else{
+
+            aleatoire(verbeG2.length); // appel fonction aléatoire entre 0 et la longueur de la liste de verbe, renvoi valeur dans alea
+            verbeActif = verbeG2[alea]; //seulement le radical du verbe
+            verbeEntier = verbeActif + "ir"; // verbe entier
+
+            switch (temps){
+                case "imparfait":
+                {
+                    terminaison = terminaisonImparfaitG2[placePronom];
+                }
+                    break;
+
+                case "present":
+                {
+                    terminaison = terminaisonPresentG2[placePronom];
+                }
+                    break;
+
+                case "future":
+                {
+                    terminaison = terminaisonFutureG2[placePronom];
+                }
+                    break;
+            }
+        }
+        consigne = "Conjuge le verbe " + verbeEntier + " :";
+    }
+
+    function initialiser() { // faire disparaitre les excercices et les réponses
+        for (var u=0; u<=9; u++){
+            listExe[u].className = "hide"; // Cacher les exercices
+            listInput[u].style.color = 'white'; // enlever les couleurs oranges des mauvaises reponses
+            listInput[u].value=""; // supprimer les réponses marqués précédement
+            valider[u].className = ""; // faire ré-apparitre tous les boutons valider
+            listInput[u].disabled = false; // autoriser l'ajout de valeur dans le input
+            listCorrection[u].value = "";
+        }
+        listExe[0].className = ""; // montrer le premier exercice
+        listCorrection[0].className = "";
+    }
+
+    function recommencer() {  // recommencer avec score initiale
+        divExercice.className = "";
+        nombreParties = 0;
+        reussite =0;
+        score = 100;
+        compteur.value = "0";
+    }
+
+    function debuter(x) { // se déclenche lorsqu'on choisit le temps
+
+
+
+        divExercice.className = "visible";
+
+        initialiser();
+
+        temps = x.getAttribute('id');
+
+        conjuguer();
+
+        listConsigne[0].value= consigne;
+        listConsigne[0].disabled="true";
+
+        listDebut[0].value= pronomActif + " " + verbeActif;
+        listDebut[0].disabled="true";
+
+        listDebut[0].style.width = (listDebut[0].value.length -1) + "ch"; // ajuster largeur de input
+
+
+    }
+
+    function conjuguer() {
+
+        aleatoire(pronom.length); // appel la fonction pour obtenir un pronom aléatoirement
+        placePronom = alea;
+        pronomActif = pronom[placePronom];  // la place du pronom = la place de la terminaison dans la table
+
+        aleatoire(2);   //car il existe 2 groupes, appel la fonction
+        groupe = alea;
+
+        obtenirTerminaison(temps, placePronom, groupe); // appel la fonction
+
+        correction = verbeActif + terminaison; // verbe conjugé
+
+    }
+
+    function verifier(i) { // se déclenche quand on valide la réponse
+
+        nombreParties += 1;
+
+        valider[i].className = "hide";
+        listInput[i].disabled="true"; // empecher de changer la reponse
+        reponse = listInput[i].value; // obtenir la reponse entrée
+
+        if (reponse == terminaison){
+            console.log("Bravo !")
+            reussite += 1;
+        }else {
+            console.log("Raté...");
+            listInput[i].style.color = 'orange'; // colorer en orange la reponse fausse
+            listCorrection[i].className = "show";
+            listCorrection[i].value = "Raté! La réponse était " + pronomActif + " " + correction;
+            listCorrection[i].disabled="true";
+        }
+
+        score = (reussite/nombreParties)*100; // calcule score en pourcentage
+        if (reussite == 0){
+            score = 0;
+        }
+
+        if (i==9){ // test si c'est le dernier excercie
+
+        }else {
+            conjuguer();
+
+            listConsigne[i+1].value= consigne;
+            listConsigne[i+1].disabled="true";
+
+            listDebut[i+1].value= pronomActif + " " + verbeActif;
+            listDebut[i+1].disabled="true";
+
+            listDebut[i+1].style.width = (listDebut[i+1].value.length -1) + "ch"; // ajuster largeur de input
+
+            score = Math.round(score);
+            compteur.value = score + "%";
+
+            listExe[i+1].className = ""; // rendre visible la question suivante
+        }
+
+    }
+
+    /*
+    initialiser();
+            listExe[0].className = "hide";
+     */
+
+
+</script>
+</html>

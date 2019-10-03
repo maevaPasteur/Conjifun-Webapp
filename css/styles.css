@@ -1,0 +1,357 @@
+* {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: none;
+    text-decoration: none;
+}
+/****************************************************************************/
+/********************************TYPOGRAPHY  ********************************/
+h1, h2, h3, button, h3 input {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-weight: 100;
+}
+p, input, h4, h5 input, a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 25px;
+    color: white;
+}
+h1 {
+    font-size: 150px;
+    padding-top: 25vh;
+}
+h2 {
+    font-size: 50px;
+    padding-top: 5vh;
+}
+h3, button {
+    font-size: 35px;
+}
+h4, h4 input {
+    font-size: 30px;
+}
+
+/****************************************************************************/
+/********************************** GENERAL *********************************/
+body {
+    background: linear-gradient(to right, #191e3b , #6389ad);
+    color: white;
+    width: 100vw;
+    overflow-x: hidden;
+}
+main {
+    width: 70vw;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 15vh;
+}
+
+/****************************************************************************/
+/*********************************** HEADER *********************************/
+header {
+    text-align: center;
+    height: 100vh;
+}
+header input {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: solid white 4px;
+    text-align: center;
+    margin-top: 5vh;
+}
+header .valider {
+    width: 80px;
+    height: auto;
+    margin-top: 5vh;
+    transition: ease .5s;
+}
+header .valider:hover {
+    width: 70px;
+    height: auto;
+    transition: ease .5s;
+}
+header p {
+    font-size: 30px;
+}
+
+/****************************************************************************/
+/************************************* CLOUD ********************************/
+header .cloud div {
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+    -webkit-animation: animCloud 4s linear infinite;
+    -moz-animation: animCloud 4s linear infinite;
+    -o-animation: animCloud  4s linear infinite;
+    animation: animCloud 4s linear infinite;
+}
+header .cloud {
+    position: relative;
+}
+header .cloud div:first-of-type {
+    background-image: url("../images/cloud1.png");
+    width: 20vw;
+    height: 15vw;
+    position: absolute;
+    top: -65vh;
+    left: 50px;
+}
+header .cloud div:nth-of-type(2) {
+    background-image: url("../images/could2.png");
+    width: 15vw;
+    height: 10vw;
+    position: absolute;
+    top: -30vh;
+    margin-left: 80vw;
+    animation-duration: 3s;
+}
+header .cloud div:last-of-type {
+    background-image: url("../images/cloud1.png");
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    left: 15vw;
+    animation-duration: 2.7s;
+}
+@keyframes animCloud {
+    from {
+        transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    to   {
+        transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+}
+@-webkit-keyframes animCloud {
+    from {
+        -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    to   {
+        -webkit-transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+}
+@-moz-keyframes animCloud {
+    from {
+        -moz-transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    to   {
+        -moz-transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+}
+@-o-keyframes animCloud {
+    from {
+        -o-transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    to   {
+        -o-transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+}
+
+/*********************************************************************/
+/**************************** PROFIL *********************************/
+#profil h2 {
+    display: inline-block;
+}
+#profil h2:first-of-type {
+    padding-right: 20px;
+}
+#choixTemps {
+    padding-top: 5vh;
+}
+#choixTemps button {
+    padding: 15px;
+    border: solid 4px #ebebeb;
+    background-color: #ebebeb;
+    margin-right: 50px;
+    border-radius: 20px;
+    transition: ease .5s;
+}
+#choixTemps button:hover {
+    background-color: transparent;
+    color: white;
+    transition: ease .5s;
+}
+
+/*********************************************************************/
+/**************************** EXERCICE *******************************/
+#exercice {
+    padding-top: 15vh;
+    display: none;
+}
+#exercice.visible {
+    display: block;
+    animation-name: showH5;
+    animation-duration: 1.5s;
+}
+#exercice input {
+    background-color: transparent;
+    border-bottom: solid 2px white;
+}
+#exercice h4 input{
+    border-bottom: none;
+    width: 100%;
+}
+#exercice p input:first-of-type {
+    border: none;
+}
+#exercice img {
+    width: 35px;
+    height: auto;
+    transition: ease .5s;
+    margin-left: 10px;
+    padding: 5px;
+}
+#exercice img:hover {
+    background-color: #6389ad;
+    border-radius: 50%;
+    transition: ease .5s;
+}
+#exercice img, #exercice p {
+    display: inline-block;
+    vertical-align: top;
+}
+#exercice img.hide {
+    opacity: 0;
+    transition: ease .5s;
+}
+#exercice h4 {
+    padding-top: 5vh;
+    padding-bottom: 1.5vh;
+}
+#exercice div {
+    display: block;
+    animation-name: showH5;
+    animation-duration: 2s;
+}
+
+#exercice div.hide {
+    display: none;
+}
+
+#score {
+    text-align: right;
+    padding-top: 10vh;
+}
+#score h3, #score input {
+    font-size: 150px;
+    background: transparent;
+    width: 100%;
+    text-align: right;
+}
+#exercice h5 input {
+    display: none;
+    border-bottom: none;
+    width: 100%;
+    color: orange;
+}
+#exercice h5 input.show {
+    display: block;
+    animation-name: showH5;
+    animation-duration: 1s;
+}
+@keyframes showH5 {
+    from {
+        transform: translateX(-20vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/******************* FOOTER ***********************/
+footer {
+    text-align: center;
+}
+footer img{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    transition: ease .3s;
+    filter: saturate(0) brightness(200%) ;
+}
+footer img:hover {
+    filter: saturate(1) brightness(1) ;
+    transition: ease .3s;
+}
+footer div {
+    width: 240px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+footer p {
+    padding-top: 1.5vh;
+    padding-bottom: 3vh;
+}
+footer a {
+    text-decoration: none;
+    transition: ease .3s
+}
+footer a:hover {
+    color: orange;
+    transition: ease .3s;
+}
+
+@media screen and (max-width: 900px){
+    h1 {
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 37px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    h4 input {
+        font-size: 25px;
+    }
+    main {
+        width: 90vw;
+    }
+    .cloud {
+        display: none;
+    }
+    #profil {
+        text-align: center;
+    }
+    #profil button {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 5px;
+        margin-top: 5vh;
+    }
+    #exercice.visible {
+        padding-top: 5vh;
+    }
+    #exercice p input, h5 input {
+        font-size: 20px;
+    }
+    #exercice input {
+        display: -webkit-box;
+    }
+    #score, #score h3, #score input {
+        text-align: center;
+    }
+    #exercice p input:last-of-type {
+        width: 40%;
+    }
+    #exercice p {
+        width: 70%;
+    }
+    #exercice p, #exercice img {
+        display: inline-block;
+    }
+    #exercice p input {
+        display: inline-block;
+    }
+    footer p, footer a {
+        font-size: 15px;
+    }
+}
